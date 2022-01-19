@@ -1,0 +1,84 @@
+.main-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 50vw;
+    height: 80vh;
+    background-color: rgba(12, 20, 20, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgba(56, 75, 83, 0.397) 0px 2px 4px 0px, rgba(133, 136, 138, 0.534) 0px 2px 16px 0px;
+    border-radius: 0.4rem;
+}
+
+.title {
+    color: whitesmoke;
+    margin: 0 5px 0 5px;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: white;
+    position: relative;
+    font-weight: 150;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(238, 238, 238, 0.3) 0px 7px 13px -3px, rgba(233, 233, 233, 0.2) 0px -3px 0px inset;
+}
+
+.cal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cal-label, .arrow-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.mathbirthday-info {
+    margin: 5px;
+    font-size: 1rem;
+    font-family: 'BioRhyme', serif;
+}
+
+@media only screen and (max-width: 980px) {
+    .container {
+        width: 70vw;
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .container {
+        width: 90vw;
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .title::after {
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,67 @@
+<body>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+
+  <section class="main-section">
+
+    <div class="container">
+      <h1 class="title">Welcome to Math Birthdays</h1>
+      
+      <div class="p-field p-col-12 p-md-4 cal-container">
+        <label for="touchui" class="cal-label">Select your birth date</label>
+        <i class="pi pi-arrow-down arrow-icon"></i>
+        <p-calendar [(ngModel)]="bornDate"
+                    (ngModelChange)="datePicked($event)" 
+                    [touchUI]="true" 
+                    [readonlyInput]="true" 
+                    inputId="touchui"></p-calendar>
+      </div>
+      <div>
+        <p *ngIf="birthDayCounter" class="mathbirthday-info">
+          Your next mathbirthday is your  {{ birthDayNum }}-day-old birthday
+          on <strong>{{ nextMathBirthday | date }}</strong>  
+        </p>
+      </div>
+    </div>
+    
+  </section>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+  
+</body>
